@@ -68,9 +68,7 @@ class studentController extends Controller
         'email' => 'required|email',
         'phone' => 'required',
         'address' => 'required',
-        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-      
-        
+        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', 
     ]);
      
      $id = $request->id;
@@ -102,7 +100,7 @@ class studentController extends Controller
       // No image uploaded, update other fields
       Student::where('id', '=', $id)->update(['name' => $name, 'email' => $email, 'phone' => $phone, 'address' => $address]);
   }
-    return redirect()->back()->with('success','Student updated successfully');
+     return redirect()->back()->with('success','Student updated successfully');
    }
 
 

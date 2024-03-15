@@ -55,7 +55,7 @@ $validation = Validator::make($request->all(),[
     return response()->json([
     'message' => 'Masum bikesh pahele toh tum error ko fix karo',
     'errors' => $validation->errors(),
-     'status' => false
+    'status' => false
     ]);
    }
 
